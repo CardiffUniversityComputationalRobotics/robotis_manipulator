@@ -17,7 +17,7 @@ endif()
 ################################################################################
 find_package(Eigen3 REQUIRED)
 find_package(ament_cmake REQUIRED)
-find_package(cmake_modules REQUIRED)
+# find_package(cmake_modules REQUIRED)
 find_package(rclcpp REQUIRED)
 
 ################################################################################
@@ -34,7 +34,7 @@ include_directories(
 
 set(dependencies_lib
   "EIGEN3"
-  "cmake_modules"
+  # "cmake_modules"
   "rclcpp"
 )
 
@@ -74,7 +74,7 @@ install(DIRECTORY include/
 ################################################################################
 ament_export_include_directories(include)
 ament_export_dependencies(rclcpp)
-ament_export_dependencies(cmake_modules)
+# ament_export_dependencies(cmake_modules)
 ament_export_dependencies(Eigen3)
 ament_export_libraries(${LIB_NAME})
 ament_package()
